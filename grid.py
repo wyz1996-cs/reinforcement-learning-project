@@ -83,18 +83,22 @@ world = [[(i, j) for j in range(12)] for i in range(12)]
 traps = [(8, 11), (8, 10), (8, 9), (8, 8), (9, 8), (10, 8), (10, 9), (10, 10), (9, 5), (10, 7), (9, 2), (9, 7), (6, 9),(2, 2), (2, 1), (2, 0),(1,2)]
 start_position = (1, 1)
 goal_position = (9, 9)
-# plot_world(world, stone_list, start_position, final_position)
-# 动作
+
+
+# actions
 action = ["up", "down", "left", "right"]
+
 # set up 4*12*12 q table, for 12*12 grid, each grid has 4 actions, all values set to 0
 # set up 12*12 policy table, all values set to 0
 q_table = [[[0 for k in range(4)] for j in range(len(world))] for i in range(len(world))]
 policy = [[0 for j in range(len(world))] for i in range(len(world))]
+
 # learning parameters
 episodes = 1000
 alpha = 0.8
 gamma = 0.7
 epsilon = 0.5
+
 # Learning
 for episode in range(episodes):
     current_state = start_position
