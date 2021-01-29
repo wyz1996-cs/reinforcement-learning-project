@@ -9,4 +9,5 @@ DQN Carpole: Network_part contains two function 1)network, the network used to t
 
 Agent: implement update logic for network and q learning
        policy function decide next action
+       
 run environemnt: set up the whole iterative env and execute, the goal is to reach 300 step on cartpole in 10 consecutive runs. Result is ~150 episode
